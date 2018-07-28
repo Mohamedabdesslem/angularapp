@@ -15,12 +15,18 @@ export class AboutComponent implements OnInit {
   comments=[{data:new Date(),message:"A"},
   {data:new Date(),message:"B"},
   {data:new Date(),message:"C"}
-
-
 ]
+
+commentaire={data: null, message:""};
   constructor() { }
 
   ngOnInit() {
   }
+  onAddCommentaire(c)
+{
+c.data=new Date()
+this.comments.push(c);
+this.commentaire.message="";
+}
 
 }
