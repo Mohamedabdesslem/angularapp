@@ -1,0 +1,14 @@
+<div>
+<ul>
+<li>Nom:<strong>{{info.nom}}</strong></li>
+<li>Email:<strong>{{info.email}}</strong></li>
+<li>Tel:<strong>{{info.tel}}</strong></li>
+
+</ul>
+<ul >
+  <li *ngFor="let comment of comments">
+    {{comment.message}}
+    <span>{{comment.data | date:'dd/mm/yyyy:hh:mm:ss'}}</span>
+    </li>
+</ul>
+</div>
