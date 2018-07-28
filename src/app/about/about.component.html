@@ -1,43 +1,14 @@
-<p></p>
-<div class="container">
-  <div class="panel panel-primary">
-    <div class="panel-heading"> About </div>
-    <div class="panel-body"> 
+<div>
+<ul>
+<li>Nom:<strong>{{info.nom}}</strong></li>
+<li>Email:<strong>{{info.email}}</strong></li>
+<li>Tel:<strong>{{info.tel}}</strong></li>
 
-    <div>
-      <div>
-      <h3>Infos:</h3>
-      <ul class="list-group">
-      <li class="list-group-item">Nom: <strong>{{info.nom}}</strong></li>
-      <li class="list-group-item">Email: <strong>{{info.email}}</strong></li>
-      <li class="list-group-item">Tel: <strong>{{info.tel}}</strong></li>
-      </ul>
-    </div>  
-     
-      <div>
-      <form  #f="ngForm" (ngSubmit)="onAddCommentaire(f.value)" >
-       <div class="form-group">
-       <label class="control-label"> Message:</label>
-       <input name="message" required="" ngModel type="text" [(ngModel)]="commentaire.message" > 
-       <button [disabled]="!f.valid" type="submit" class="btn btn-primary"  >Ajouter commentaire</button>
-      </div>
-     </form>
-      </div>
-    
-      <div>
-      <h3>Commentaires:</h3>
-      <ul class="list-group">
-        <li class="list-group-item" *ngFor="let comment of comments">
-          {{comment.message}}
-          <span class="badge badge-primary">{{comment.data | date:'dd/mm/yyyy:hh:mm:ss'}}</span>
-          </li>
-      </ul>
-    </div>
-   </div>
-
-    </div>
-  </div>
+</ul>
+<ul >
+  <li *ngFor="let comment of comments">
+    {{comment.message}}
+    <span>{{comment.data | date:'dd/mm/yyyy:hh:mm:ss'}}</span>
+    </li>
+</ul>
 </div>
-
-
-
