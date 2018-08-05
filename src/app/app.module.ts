@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { AboutService } from 'src/services/about.service';
 
 
 @NgModule({
@@ -16,7 +15,7 @@ import { AboutService } from 'src/services/about.service';
   imports: [
     BrowserModule,FormsModule
   ],
-  providers: [AboutService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
